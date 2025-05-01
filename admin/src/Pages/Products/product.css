@@ -1,0 +1,16 @@
+select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+    outline: none;
+  }
+  
+  select:focus {
+    border-color: #4f46e5; /* Indigo (you can customize it) */
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+  }

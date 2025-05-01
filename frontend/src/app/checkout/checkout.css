@@ -1,0 +1,36 @@
+
+
+.checkout-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2rem;
+}
+
+.checkout-main {
+  flex: 1;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.checkout-sidebar {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .checkout-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .checkout-main {
+    flex: 1;
+  }
+
+  .checkout-sidebar {
+    width: 380px;
+    position: sticky;
+    top: 2rem;
+  }
+}

@@ -1,0 +1,135 @@
+.contact-form-container {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-container h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.form-subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem 1rem;
+  margin-bottom: .5rem;
+}
+
+.form-group {
+  margin-bottom: .5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.text-input-icon {
+  position: absolute;
+  left: 1rem;
+  top: 17%;
+  transform: translateY(-50%);
+  color: var(--text-gray);
+  font-size: 1.1rem;
+}
+
+.input-container input,
+.input-container select,
+.input-container textarea {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-container input:focus,
+.input-container select:focus,
+.input-container textarea:focus {
+  border-color: var(--web-theme);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.1);
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem;
+  background: var(--web-theme);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  box-shadow: 0 5px 15px rgba(0, 112, 243, 0.3);
+}
+
+.submit-button:disabled {
+  background: #4bb543;
+  cursor: default;
+}
+
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #4bb543;
+  color: white;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+
+.spin-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+}

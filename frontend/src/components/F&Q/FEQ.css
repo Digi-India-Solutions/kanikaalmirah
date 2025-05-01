@@ -1,0 +1,23 @@
+.accordion-button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  background-color: #f8f9fa;
+}
+
+.accordion-button
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.accordion-button:not(.collapsed):active {
+  outline: none;
+  background: none;
+}
+
+@media (max-width: 768px) {
+  .accordion-button {
+    font-size: 1rem;
+  }
+}

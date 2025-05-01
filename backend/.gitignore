@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.*.local
+
+
+# Editor folders
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+coverage/
+
+# PM2 logs and config
+pids/
+*.pid
+*.seed
+*.pid.lock
+pm2.log
+ecosystem.config.js
+
+

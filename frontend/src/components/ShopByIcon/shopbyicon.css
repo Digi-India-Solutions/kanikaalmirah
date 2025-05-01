@@ -1,0 +1,234 @@
+.shop-by-icon-section {
+  position: relative;
+  padding: 2rem 0;
+  background: #0c0e2b;
+  overflow: hidden;
+}
+
+.section-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 14, 43, 0.95) 0%,
+    rgba(26, 16, 83, 0.95) 100%
+  );
+}
+
+.pattern-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.shop-icon-container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-header h2 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-family: ui-monospace;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.category-wrapper {
+  perspective: 1000px;
+}
+
+.category-card {
+  position: relative;
+  display: block;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.category-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-wrapper i {
+  font-size: 2rem;
+  color: #00a6ff;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover .icon-wrapper {
+  background: #00a6ff;
+  transform: rotateY(180deg);
+}
+
+.category-card:hover .icon-wrapper i {
+  color: white;
+  transform: rotateY(-180deg);
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.by-icon-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1.5rem;
+  min-height: 40px;
+}
+
+.hover-content {
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.category-card:hover .hover-content {
+  height: 40px;
+  opacity: 1;
+}
+
+.explore-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #00a6ff;
+  font-weight: 600;
+}
+
+.explore-text i {
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .explore-text i {
+  transform: translateX(5px);
+}
+
+.card-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  20%,
+  100% {
+    left: 200%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-by-icon-section {
+    padding: 1.5rem 0;
+  }
+  .section-header h2 {
+    font-size: 22px;
+  }
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .card-content {
+    padding: 1.2rem;
+  }
+  .icon-wrapper {
+    width: 50px;
+    height: 50px;
+  }
+  .icon-wrapper i {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-header h2 {
+    font-size: 18px;
+  }
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content {
+    padding: 0.8rem;
+  }
+
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 0.8rem;
+  }
+
+  .icon-wrapper i {
+    font-size: 1rem;
+  }
+
+  .card-content h3 {
+    font-size: 0.75rem;
+  }
+
+  .by-icon-description {
+    font-size: 0.7rem;
+  }
+}

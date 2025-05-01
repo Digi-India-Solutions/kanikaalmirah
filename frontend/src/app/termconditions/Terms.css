@@ -1,0 +1,44 @@
+/* Terms.css */
+.terms-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.terms-container h2 {
+  font-size: 1.5rem;
+  color: var(--text-black);
+  margin-top: 20px;
+}
+
+.terms-container p {
+  font-size: 1rem;
+  color: var(--text-gray);
+}
+
+.terms-container ul {
+  padding-left: 20px;
+}
+
+.terms-container ul li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .terms-container {
+    padding: 20px;
+  }
+
+  .terms-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .terms-container h2 {
+    font-size: 1.3rem;
+  }
+}

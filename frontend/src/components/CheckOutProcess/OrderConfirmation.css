@@ -1,0 +1,263 @@
+.confirmation-container {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .confirmation-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .success-icon {
+    font-size: 4rem;
+    color: #4bb543;
+    margin-bottom: 1rem;
+  }
+  
+  .confirmation-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .confirmation-header p {
+    color: #666;
+    /* max-width: 500px; */
+    margin: 0 auto;
+  }
+  
+  .order-details {
+    margin-bottom: 2.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .order-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .order-info-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .info-label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.25rem;
+  }
+  
+  .info-value {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  
+  .order-summary {
+    margin-bottom: 2.5rem;
+  }
+  
+  .order-summary h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+  }
+  
+  .confirmation-items {
+    margin-bottom: 1.5rem;
+  }
+  
+  .confirmation-item {
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .confirmation-item:last-child {
+    border-bottom: none;
+  }
+  
+  .item-image {
+    margin-right: 1rem;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #1a1a1a;
+  }
+  
+  .item-variant {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-price-qty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .item-price {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  
+  .item-qty {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .confirmation-totals {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  .total-row:last-child {
+    margin-bottom: 0;
+  }
+  
+  .grand-total {
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .shipping-info {
+    margin-bottom: 2.5rem;
+  }
+  
+  .shipping-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .shipping-info p {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .address-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .address-box p {
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .address-box p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .tracking-info {
+    display: flex;
+    align-items: center;
+    background-color: #e6f7ff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .tracking-icon {
+    font-size: 2rem;
+    color: #0070f3;
+    margin-right: 1.5rem;
+  }
+  
+  .tracking-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+  }
+  
+  .tracking-content p {
+    color: #666;
+    margin: 0;
+  }
+  
+  .confirmation-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #0070f3 0%, #00a6ff 100%);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 112, 243, 0.2);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 6px 15px rgba(0, 112, 243, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background: white;
+    color: #0070f3;
+    border: 1px solid #0070f3;
+  }
+  
+  .btn-secondary:hover {
+    background: #f0f7ff;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .order-info-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .confirmation-actions {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  

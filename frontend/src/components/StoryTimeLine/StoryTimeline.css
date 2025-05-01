@@ -1,0 +1,121 @@
+  
+  .story-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+  
+  .story-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-black);
+  }
+  
+  .story-header p {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom, #ff6b6b, #00a6ff);
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+    width: 50%;
+  }
+  
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 3rem;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 3rem;
+  }
+  
+  .timeline-item:nth-child(odd)::after,
+  .timeline-item:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--web-theme);
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+  }
+  
+  .timeline-item:nth-child(odd)::after {
+    right: -10px;
+  }
+  
+  .timeline-item:nth-child(even)::after {
+    left: -10px;
+  }
+  
+  .timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .year {
+    display: inline-block;
+    background: linear-gradient(250deg, #00f2fe 0%, #4facfe 100%);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-black);
+  }
+  
+  .timeline-content p {
+    color: var(--text-gray);
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .story-header h2 {
+      font-size: 2rem;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      left: 0 !important;
+      padding-left: 3rem !important;
+      padding-right: 0 !important;
+    }
+  
+    .timeline-line {
+      left: 10px;
+    }
+  
+    .timeline-item::after {
+      left: 0 !important;
+    }
+  }
+  
+  

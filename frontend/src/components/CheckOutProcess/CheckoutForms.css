@@ -1,0 +1,360 @@
+.checkout-form-container {
+    padding: 2rem;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group.full-width {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #1a1a1a;
+  }
+  
+  .form-group input,
+  .form-group select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #0070f3;
+    outline: none;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #0070f3 0%, #00a6ff 100%);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 112, 243, 0.2);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 6px 15px rgba(0, 112, 243, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background: white;
+    color: #0070f3;
+    border: 1px solid #0070f3;
+  }
+  
+  .btn-secondary:hover {
+    background: #f0f7ff;
+    transform: translateY(-2px);
+  }
+  
+  /* Payment Method Styles */
+  .payment-methods {
+    margin-bottom: 2rem;
+  }
+  
+  .payment-method {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .payment-method:hover {
+    border-color: #0070f3;
+  }
+  
+  .payment-method.selected {
+    border-color: #0070f3;
+    background-color: #f0f7ff;
+  }
+  
+  .payment-method input {
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  
+  .payment-method-label {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .payment-icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #0070f3;
+  }
+  
+  .payment-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-title {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.25rem;
+  }
+  
+  .payment-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .card-details,
+  .upi-details,
+  .cod-details {
+    margin-bottom: 2rem;
+  }
+  
+  .card-input-container {
+    position: relative;
+  }
+  
+  .card-icons {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+  
+  .cvv-container {
+    position: relative;
+  }
+  
+  .cvv-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    cursor: help;
+  }
+  
+  .form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .form-checkbox input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .form-checkbox label {
+    cursor: pointer;
+    color: #1a1a1a;
+  }
+  
+  .payment-note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .payment-note i {
+    color: #0070f3;
+  }
+  
+  /* Order Review Styles */
+  .review-sections {
+    margin-bottom: 2rem;
+  }
+  
+  .review-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .review-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .review-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  
+  .edit-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: none;
+    border: none;
+    color: #0070f3;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .review-content {
+    color: #1a1a1a;
+  }
+  
+  .review-content p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .payment-review {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .order-items-review {
+    margin-bottom: 1.5rem;
+  }
+  
+  .order-item-review {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .order-item-review:last-child {
+    border-bottom: none;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #1a1a1a;
+  }
+  
+  .item-variant {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .item-price-qty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .item-price {
+    font-weight: 600;
+    color: #1a1a1a;
+  }
+  
+  .item-qty {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .order-totals-review {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+  }
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  .total-row:last-child {
+    margin-bottom: 0;
+  }
+  
+  .grand-total {
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .form-actions {
+      flex-direction: column-reverse;
+      gap: 1rem;
+    }
+  
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  

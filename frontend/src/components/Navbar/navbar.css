@@ -1,0 +1,333 @@
+/* ----------Float Icon ----------- */
+.to-make-fix {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-info {
+  background: var(--web-theme);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0.75rem 0rem;
+}
+
+.nav-info .left-nav,
+.center-nav,
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.nav-info .left-nav a,
+.center-nav a,
+.right-nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-info .left-nav i,
+.right-nav i {
+  animation: ring 2s infinite;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-15deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(-5deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.nav-info1 {
+  display: flex;
+  background: #f2f8fc;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav-info1 .left-nav1,
+.nav-info1 .right-nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.nav-info1 .left-nav1 a,
+.nav-info1 .right-nav1 a {
+  text-decoration: none;
+}
+
+.nav-info1 .left-nav1 .inner-left-nav1,
+.nav-info1 .right-nav1 .inner-left-nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: var(--text-black);
+}
+
+.nav-info1 .center-nav1 img {
+  width: 160px;
+  height: 60px;
+}
+
+/* -------Navbar Category------------------ */
+
+/* Navbar Styling */
+/* Make sure navbar is centered */
+.navbar2 {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Align vertically */
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Center the nav-links */
+.nav-links {
+  display: flex;
+  justify-content: center; /* Ensures links are centered */
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link2 {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-black);
+  letter-spacing: 1px;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect - Underline starts from center */
+/* .nav-link2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--web-theme);
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-item:hover .nav-link2::after {
+  width: 100%;
+}
+
+.nav-item.active .nav-link2::after {
+  width: 100%;
+  left: 0;
+  transform: none;
+} */
+
+.mobile-nav {
+  display: none;
+}
+
+.menu-toggle {
+  /* position: fixed; */
+  top: 40px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.close-btn {
+  display: none;
+}
+
+.mob-web-links {
+  display: none;
+}
+
+.mob-humber {
+  display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 1000px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-link2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-nav1,
+  .left-nav,
+  .right-nav,
+  .right-nav1 {
+    display: none !important;
+  }
+
+  .navbar2 {
+    display: none;
+  }
+
+  /* ----------Mobile Responsive bar -------------------------------------- */
+
+  .mob-humber {
+    display: block;
+  }
+
+  .close-btn {
+    display: block;
+  }
+
+  .mob-web-links {
+    display: block;
+  }
+
+  .web-mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #0c3f51ed;
+    color: white;
+    padding-top: 60px;
+    backdrop-filter: blur(6px);
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  /* When Menu is Open */
+  .web-mobile-nav.open {
+    left: 0;
+  }
+
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 40px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Mobile Nav Links */
+  .web-nav-links-mobile {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+
+  .web-nav-links-mobile li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .web-nav-links-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    transition: 0.3s;
+  }
+
+  /* -----------Mobile icon bar ------------------------- */
+  .mobile-nav {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    width: 100%;
+    background: var(--web-theme);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px 12px 0 0;
+    z-index: 1000;
+  }
+
+  .bottom-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .mobnav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .mobnav-item i {
+    font-size: 18px;
+  }
+
+  .mobnav-item:focus i {
+    color: black;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-info1 .center-nav1 img {
+    width: 100px;
+    height: 40px;
+  }
+
+  .info-text {
+    font-size: 9px;
+  }
+}

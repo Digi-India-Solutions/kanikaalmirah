@@ -1,0 +1,286 @@
+.product-gallery {
+  position: relative;
+}
+
+.main-image-container {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-specs ul {
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.product-specs li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.main-image:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  opacity: 1;
+  border: 2px solid #007bff;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.product-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-sm {
+  width: 16px;
+  height: 16px;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-icon {
+  color: #ffd700;
+  width: 18px;
+  height: 18px;
+}
+
+.rating-count {
+  margin-left: 8px;
+  color: #6c757d;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.current-price {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.original-price {
+  font-size: 1.2rem;
+  color: #6c757d;
+  text-decoration: line-through;
+}
+
+.discount-badge {
+  background: #dc3545;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.color-options {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.color-option {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-option.active {
+  border-color: #007bff;
+}
+
+.color-option.gold {
+  background: linear-gradient(45deg, #bf953f, #fcf6ba, #b38728, #fbf5b7);
+}
+
+.color-option.silver {
+  background: linear-gradient(45deg, #cfcfcf, #ffffff, #a8a8a8);
+}
+
+.color-option.rose-gold {
+  background: linear-gradient(45deg, #f7d3d3, #f9f3f3, #f4c4c4);
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 8px;
+}
+
+.quantity {
+  font-size: 1.2rem;
+  font-weight: 500;
+  min-width: 40px;
+  text-align: center;
+}
+
+.shipping-info {
+  border-top: 1px solid #dee2e6;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.shipping-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shipping-item h6 {
+  margin: 0;
+}
+
+.shipping-item p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  /* background: linear-gradient(to right, #5e5353 0%, #01527b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.related-product {
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  background: #ffffff;
+}
+
+.related-product:hover {
+  transform: translateY(-5px);
+}
+
+.related-product-image {
+  border-radius: 8px;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.product-meta {
+  display: flex;
+  gap: 1rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.current-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-gray);
+}
+
+.original-price {
+  color: red;
+  text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 0.8rem;
+  }
+
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+  }
+
+  .product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    color: #6c757d;
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .current-price {
+    font-size: 1rem;
+  }
+
+  .original-price {
+    font-size: 0.8rem;
+  }
+
+  .main-image {
+    height: 350px;
+    
+  }
+
+  .related-product-image {
+    width: 150px;
+    height: 150px;
+  }
+}

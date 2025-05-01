@@ -1,0 +1,226 @@
+.banner-top-style {
+  margin-top: 188px !important;
+}
+
+.Desktop-hero {
+  display: block;
+}
+
+.mobile-hero-section {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .banner-top-style {
+    margin-top: 125px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .Desktop-hero {
+    display: none;
+  }
+
+  .mobile-hero-section {
+    display: block;
+    margin-top: 85px;
+  }
+
+  /* Base Styles for Mobile Hero Section */
+  .mobile-hero-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+
+  .mobile-hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile-hero-image-container {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .mobile-hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .mobile-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  .mobile-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.6) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  }
+
+  .mobile-hero-content {
+    position: absolute;
+    bottom: 40;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    z-index: 3;
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    height: 100%;
+  }
+
+  .mobile-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .mobile-hero-badge i {
+    color: #00a6ff;
+    font-size: 1rem;
+  }
+
+  .mobile-hero-badge span {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .mobile-hero-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+  }
+
+  .mobile-hero-subtitle {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+  }
+
+  .mobile-hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .feature-item i {
+    color: #00a6ff;
+    font-size: 1.2rem;
+  }
+
+  .feature-item span {
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .mobile-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #00a6ff 0%, #0062ff 100%);
+    color: white;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 166, 255, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 166, 255, 0.5);
+  }
+
+  .mobile-cta-button i {
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-cta-button:hover i {
+    transform: translateX(3px);
+  }
+
+  .mobile-hero-scroll {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .mobile-scroll-indicator {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 2s infinite;
+  }
+
+  .mobile-scroll-indicator i {
+    color: white;
+    font-size: 1rem;
+  }
+
+  .mobile-hero-scroll span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8rem;
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+}
