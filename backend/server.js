@@ -8,7 +8,7 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 app.use(morgan("dev"));
-const allowedOrigins = ["https://kanikaalmirah.com", "https://www.kanikaalmirah.com", "https://admin.kanikaalmirah.com"];
+const allowedOrigins = ["https://kanikaalmirah.com", "https://www.kanikaalmirah.com", "https://admin.kanikaalmirah.com","http://localhost:3000"];
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
@@ -36,7 +36,6 @@ import CheckoutRouter from "./routes/checkout.route.js"
 import CertificateRouter from "./routes/certificate.route.js"
 import InquiryRouter from "./routes/inquiry.route.js"
 import VideoRouter from "./routes/video.route.js"
-import morgan from "morgan";
 app.use("/api/v1/auth",UserRouter)
 app.use("/api/v1/product",ProductRouter)
 app.use("/api/v1/category",CategoryRouter)
