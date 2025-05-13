@@ -43,7 +43,7 @@ const AllProduct = () => {
 
         if (confirm.isConfirmed) {
             try {
-                const data = await postData(`api/v1/product/delete-product/${productId}`);
+                const data = await axiosInstance.delete(`/api/v1/product/delete-product/${productId}`);
                 if (data.success) {
                     setProducts(products.filter(product => product._id !== productId));
                     toast.success("Product deleted successfully!");

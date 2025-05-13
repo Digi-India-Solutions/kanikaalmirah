@@ -41,7 +41,7 @@ const AllCoupon = () => {
 
         if (confirmDelete.isConfirmed) {
             try {
-                const response = await getData(`api/v1/coupon/delete-coupon/${id}`);
+                const response = await axiosInstance.delete(`/api/v1/coupon/delete-coupon/${id}`);
                 if (response.success === true) {
                     setCoupons(coupons?.filter(coupon => coupon?._id !== id));
                     Swal.fire('Deleted!', 'Your coupon has been deleted.', 'success');
