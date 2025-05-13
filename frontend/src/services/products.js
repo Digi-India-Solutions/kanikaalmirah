@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:9000";
+const BASE_URL = "https://api.kanikaalmirah.com";
 
 export const getAllProducts = async () => {
   const res = await axios.get(`${BASE_URL}/api/v1/product/get-all-products`);

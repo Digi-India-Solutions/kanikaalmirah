@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const Base_URL = "http://localhost:9000";
+const Base_URL = "https://api.kanikaalmirah.com";
 
 export const axiosInstance = axios.create({
   baseURL: Base_URL,

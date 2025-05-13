@@ -1,5 +1,5 @@
 import axios from "axios";
-const serverURL = "http://localhost:9000";
+const serverURL = "https://api.kanikaalmirah.com";
 
 const postData = async (url, body) => {
   try {
@@ -25,7 +25,7 @@ const getData = async (url) => {
 };
 
 const axiosInstance=axios.create({
-  baseURL: "http://localhost:9000",
+  baseURL: "https://api.kanikaalmirah.com",
   headers:{
     "Content-Type": "application/json"
   },
