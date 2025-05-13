@@ -6,10 +6,15 @@ import { connectDB } from "./db/index.js";
 import cookieParser from "cookie-parser";
 
 const app = express();
-
+const allowedOrigins = ["https://kanikaalmirah.com", "https://www.kanikaalmirah.com", "https://admin.kanikaalmirah.com"];
 app.use(cors({
-  origin:["http://localhost:3000","http://localhost:3001"],
-  credentials:true
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error("Not allowed by CORS"));
+  },
+  credentials: true,
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
