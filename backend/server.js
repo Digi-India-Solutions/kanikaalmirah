@@ -2,10 +2,12 @@ import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import cors from "cors";
+import morgan from "morgan";
 import { connectDB } from "./db/index.js";
 import cookieParser from "cookie-parser";
 
 const app = express();
+app.use(morgan("dev"));
 const allowedOrigins = ["https://kanikaalmirah.com", "https://www.kanikaalmirah.com", "https://admin.kanikaalmirah.com"];
 app.use(cors({
   origin: function (origin, callback) {
@@ -15,6 +17,7 @@ app.use(cors({
     return callback(new Error("Not allowed by CORS"));
   },
   credentials: true,
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -33,6 +36,7 @@ import CheckoutRouter from "./routes/checkout.route.js"
 import CertificateRouter from "./routes/certificate.route.js"
 import InquiryRouter from "./routes/inquiry.route.js"
 import VideoRouter from "./routes/video.route.js"
+import morgan from "morgan";
 app.use("/api/v1/auth",UserRouter)
 app.use("/api/v1/product",ProductRouter)
 app.use("/api/v1/category",CategoryRouter)
