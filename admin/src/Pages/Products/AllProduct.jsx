@@ -44,7 +44,7 @@ const AllProduct = () => {
         if (confirm.isConfirmed) {
             try {
                 const data = await axiosInstance.delete(`/api/v1/product/delete-product/${productId}`);
-                if (data.success) {
+                if (data.status === 200) {
                     setProducts(products.filter(product => product._id !== productId));
                     toast.success("Product deleted successfully!");
                 }
